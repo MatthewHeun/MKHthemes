@@ -29,6 +29,8 @@ xy_theme <- function(base_size = 12, base_family = "", base_theme = theme_bw, la
   # See https://github.com/infotroph/ggplot-ticks if we want to mirror ticks on top and right.
   base_theme(base_size = base_size, base_family = base_family) %+replace%
     theme(# panel.border = element_blank(),
+      # Change border to gray
+      panel.border = element_rect(fill = NA, color = label_colour, size = 0.5, linetype = "solid"),
       panel.grid.major = element_blank(), # No grid lines
       panel.grid.minor = element_blank(), # No grid lines
       plot.background = element_blank(),
