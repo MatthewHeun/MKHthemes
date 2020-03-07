@@ -9,6 +9,7 @@ Author: Matthew Heun [aut, cre]
 Maintainer: Matthew Kuperus Heun <matthew.heun@me.com>
 Description: Provides functions for ggplot2 graphs.
 License: MIT + file LICENSE
+Language: en-US
 Encoding: UTF-8
 RoxygenNote: 6.0.1
 Depends: R (>= 2.10)
