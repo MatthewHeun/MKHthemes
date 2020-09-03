@@ -2,10 +2,14 @@
 % Please edit documentation in R/Graphics.R
 \name{xy_theme}
 \alias{xy_theme}
-\title{Set the typical theme for graphs.}
+\title{Set a pleasing theme for graphs.}
 \usage{
-xy_theme(base_size = 12, base_family = "", base_theme = theme_bw,
-  label_colour = "gray50")
+xy_theme(
+  base_size = 12,
+  base_family = "",
+  base_theme = ggplot2::theme_bw,
+  label_colour = "gray50"
+)
 }
 \arguments{
 \item{base_size}{the base font size for text elements. Default is \code{12}.}
@@ -19,11 +23,11 @@ xy_theme(base_size = 12, base_family = "", base_theme = theme_bw,
 \description{
 This function provides a graphical style that includes
 \itemize{
-  \item gray axes,
-  \item gray tic marks,
-  \item inward-pointing tic marks,
-  \item no grid lines,
-  \item and white plot background.#'
+\item gray axes,
+\item gray tic marks,
+\item inward-pointing tic marks,
+\item no grid lines,
+\item and white plot background.#'
 }
 }
 \examples{
