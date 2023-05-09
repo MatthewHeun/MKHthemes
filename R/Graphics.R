@@ -32,7 +32,7 @@ xy_theme <- function(base_size = 12, base_family = "", base_theme = ggplot2::the
   base_theme(base_size = base_size, base_family = base_family) %+replace%
     ggplot2::theme(# panel.border = element_blank(),
       # Change border to gray
-      panel.border = ggplot2::element_rect(fill = NA, color = label_colour, size = 0.5, linetype = "solid"),
+      panel.border = ggplot2::element_rect(fill = NA, color = label_colour, linewidth = 0.5, linetype = "solid"),
       panel.grid.major = ggplot2::element_blank(), # No grid lines
       panel.grid.minor = ggplot2::element_blank(), # No grid lines
       plot.background = ggplot2::element_blank(),
@@ -43,7 +43,7 @@ xy_theme <- function(base_size = 12, base_family = "", base_theme = ggplot2::the
       legend.key = ggplot2::element_rect(fill = NA, colour = NA),
       legend.text = ggplot2::element_text(colour = label_colour),
       axis.text = ggplot2::element_text(colour = label_colour, size = 0.8 * base_size),
-      axis.ticks = ggplot2::element_line(colour = label_colour, size = 0.2), # Sets thickness of ticks
+      axis.ticks = ggplot2::element_line(colour = label_colour, linewidth = 0.2), # Sets thickness of ticks
       axis.title = ggplot2::element_text(colour = label_colour, size = base_size),
       # Put ticks inside graph and adjust location of axis labels appropriately.
       axis.ticks.length = ggplot2::unit(-0.3 * base_size,  "pt"),
