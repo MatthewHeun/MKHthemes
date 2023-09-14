@@ -9,10 +9,12 @@
 #'   \item gray tic marks,
 #'   \item inward-pointing tic marks,
 #'   \item no grid lines,
-#'   \item and white plot background.#'
+#'   \item and white plot background.
 #' }
 #'
 #' @param base_size The base font size for text elements. Default is `12`.
+#' @param tick_length The tick length in points. Default is `-0.3*base_size`, which is -3.6 points.
+#'                    Negatuve is inside the graph, where ticks belong!
 #' @param base_family The base font family. Default is an empty string (`""`).
 #' @param base_theme The base theme for ggplot2 graphics. Default is `theme_bw`.
 #' @param label_colour The colour for labels. Default is "gray50".
@@ -27,7 +29,11 @@
 #' ggplot(data = DF, mapping = aes(x = x, y = y)) +
 #'   geom_point() +
 #'   xy_theme()
-xy_theme <- function(base_size = 12, base_family = "", base_theme = ggplot2::theme_bw, label_colour = "gray50") {
+xy_theme <- function(base_size = 12,
+                     tick_length = -0.3*base_size,
+                     base_family = "",
+                     base_theme = ggplot2::theme_bw,
+                     label_colour = "gray50") {
   # See https://github.com/infotroph/ggplot-ticks if we want to mirror ticks on top and right.
   base_theme(base_size = base_size, base_family = base_family) %+replace%
     ggplot2::theme(# panel.border = element_blank(),
@@ -46,7 +52,7 @@ xy_theme <- function(base_size = 12, base_family = "", base_theme = ggplot2::the
       axis.ticks = ggplot2::element_line(colour = label_colour, linewidth = 0.2), # Sets thickness of ticks
       axis.title = ggplot2::element_text(colour = label_colour, size = base_size),
       # Put ticks inside graph and adjust location of axis labels appropriately.
-      axis.ticks.length = ggplot2::unit(-0.3 * base_size,  "pt"),
+      axis.ticks.length = ggplot2::unit(tick_length,  "pt"),
       axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 0.8*base_size, unit = "pt")),
       axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = 0.8*base_size, unit = "pt"), hjust = 1) # Right justify
     )
