@@ -14,7 +14,7 @@
 #'
 #' @param base_size The base font size for text elements. Default is `12`.
 #' @param tick_length The tick length in points. Default is `-0.3*base_size`, which is -3.6 points.
-#'                    Negatuve is inside the graph, where ticks belong!
+#'                    Negative is inside the graph, where ticks belong!
 #' @param base_family The base font family. Default is an empty string (`""`).
 #' @param base_theme The base theme for ggplot2 graphics. Default is `theme_bw`.
 #' @param label_colour The colour for labels. Default is "gray50".
