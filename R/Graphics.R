@@ -36,15 +36,15 @@
 #'   xy_theme()
 xy_theme <- function(base_size = 12,
                      tick_length = -0.3*base_size,
-                     x_axis_text_spacing = 0.8*base_size,
-                     y_axis_text_spacing = 0.8*base_size,
+                     x_axis_labels_spacing = 0.8*base_size,
+                     y_axis_labels_spacing = 0.8*base_size,
                      base_family = "",
                      base_theme = ggplot2::theme_bw,
                      label_colour = "gray50") {
   # See https://github.com/infotroph/ggplot-ticks if we want to mirror ticks on top and right.
   base_theme(base_size = base_size, base_family = base_family) %+replace%
-    ggplot2::theme(# panel.border = element_blank(),
-      # Change border to gray
+    ggplot2::theme(
+      # Set border colour to label_colour
       panel.border = ggplot2::element_rect(fill = NA,
                                            color = label_colour,
                                            linewidth = 0.5,
@@ -54,10 +54,13 @@ xy_theme <- function(base_size = 12,
       plot.background = ggplot2::element_blank(),
       strip.text = ggplot2::element_text(colour = label_colour,
                                          size = 0.8 * base_size),
-      strip.background = ggplot2::element_rect(fill = NA, colour = NA),
+      strip.background = ggplot2::element_rect(fill = NA,
+                                               colour = NA),
       legend.title = ggplot2::element_text(colour = label_colour),
-      legend.background = ggplot2::element_rect(fill = NA, colour = NA),
-      legend.key = ggplot2::element_rect(fill = NA, colour = NA),
+      legend.background = ggplot2::element_rect(fill = NA,
+                                                colour = NA),
+      legend.key = ggplot2::element_rect(fill = NA,
+                                         colour = NA),
       legend.text = ggplot2::element_text(colour = label_colour),
       axis.text = ggplot2::element_text(colour = label_colour,
                                         size = 0.8 * base_size),
@@ -67,7 +70,8 @@ xy_theme <- function(base_size = 12,
                                          size = base_size),
       # Put ticks inside graph and adjust location of axis labels appropriately.
       axis.ticks.length = ggplot2::unit(tick_length,  "pt"),
-      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = x_axis_text_spacing, unit = "pt")),
-      axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = y_axis_text_spacing, unit = "pt"), hjust = 1) # Right justify
+      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = x_axis_labels_spacing, unit = "pt")),
+      axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = y_axis_labels_spacing, unit = "pt"),
+                                          hjust = 1) # Right justify
     )
 }
