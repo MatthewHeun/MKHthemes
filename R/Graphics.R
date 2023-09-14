@@ -12,10 +12,10 @@
 #'   \item and white plot background.#'
 #' }
 #'
-#' @param base_size the base font size for text elements. Default is `12`.
-#' @param base_family the base font family. Default is an empty string (\code{""}).
-#' @param base_theme the base theme for ggplot2 graphics. Default is \code{theme_by}.
-#' @param label_colour the colour for labels. Default is "\code{gray50}".
+#' @param base_size The base font size for text elements. Default is `12`.
+#' @param base_family The base font family. Default is an empty string (`""`).
+#' @param base_theme The base theme for ggplot2 graphics. Default is `theme_bw`.
+#' @param label_colour The colour for labels. Default is "gray50".
 #'
 #' @importFrom ggplot2 %+replace%
 #'
