@@ -22,7 +22,7 @@ Negative is inside the graph, where ticks belong!}
 
 \item{base_family}{The base font family. Default is an empty string (\code{""}).}
 
-\item{base_theme}{The base theme for ggplot2 graphics. Default is \code{theme_bw}.}
+\item{base_theme}{The base theme for ggplot2 graphics. Default is \code{ggplot2::theme_bw}.}
 
 \item{label_colour}{The colour for labels. Default is "gray50".}
 
