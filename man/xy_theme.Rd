@@ -6,28 +6,41 @@
 \usage{
 xy_theme(
   base_size = 12,
+  tick_length = -0.3 * base_size,
+  x_axis_text_spacing = 0.8 * base_size,
+  y_axis_text_spacing = 0.8 * base_size,
   base_family = "",
   base_theme = ggplot2::theme_bw,
   label_colour = "gray50"
 )
 }
 \arguments{
-\item{base_size}{the base font size for text elements. Default is \code{12}.}
+\item{base_size}{The base font size for text elements. Default is \code{12}.}
 
-\item{base_family}{the base font family. Default is an empty string (\code{""}).}
+\item{tick_length}{The tick length in points. Default is \code{-0.3*base_size}, which is -3.6 points.
+Negative is inside the graph, where ticks belong!}
 
-\item{base_theme}{the base theme for ggplot2 graphics. Default is \code{theme_by}.}
+\item{base_family}{The base font family. Default is an empty string (\code{""}).}
 
-\item{label_colour}{the colour for labels. Default is "\code{gray50}".}
+\item{base_theme}{The base theme for ggplot2 graphics. Default is \code{theme_bw}.}
+
+\item{label_colour}{The colour for labels. Default is "gray50".}
+
+\item{x_axis_labels_spacing}{The distance between x axis labels and the x axis itself in points.
+Default is \code{0.8 * base_size}.}
+
+\item{y_axis_labels_spacing}{The distance between y axis labels and the y axis itself in points.
+Default is \code{0.8 * base_size}.}
 }
 \description{
-This function provides a graphical style that includes
+This function provides a graphical style for \code{ggplot2} that includes
 \itemize{
 \item gray axes,
 \item gray tic marks,
 \item inward-pointing tic marks,
-\item no grid lines,
-\item and white plot background.#'
+\item right-justified y-axis labels,
+\item no grid lines, and
+\item white background.
 }
 }
 \examples{

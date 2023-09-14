@@ -3,20 +3,25 @@
 
 #' Set a pleasing theme for graphs.
 #'
-#' This function provides a graphical style that includes
+#' This function provides a graphical style for `ggplot2` that includes
 #' \itemize{
 #'   \item gray axes,
 #'   \item gray tic marks,
 #'   \item inward-pointing tic marks,
-#'   \item no grid lines,
-#'   \item and white plot background.
+#'   \item right-justified y-axis labels,
+#'   \item no grid lines, and
+#'   \item white background.
 #' }
 #'
 #' @param base_size The base font size for text elements. Default is `12`.
 #' @param tick_length The tick length in points. Default is `-0.3*base_size`, which is -3.6 points.
 #'                    Negative is inside the graph, where ticks belong!
+#' @param x_axis_labels_spacing The distance between x axis labels and the x axis itself in points.
+#'                              Default is `0.8 * base_size`.
+#' @param y_axis_labels_spacing The distance between y axis labels and the y axis itself in points.
+#'                              Default is `0.8 * base_size`.
 #' @param base_family The base font family. Default is an empty string (`""`).
-#' @param base_theme The base theme for ggplot2 graphics. Default is `theme_bw`.
+#' @param base_theme The base theme for ggplot2 graphics. Default is `ggplot2::theme_bw`.
 #' @param label_colour The colour for labels. Default is "gray50".
 #'
 #' @importFrom ggplot2 %+replace%
@@ -31,6 +36,8 @@
 #'   xy_theme()
 xy_theme <- function(base_size = 12,
                      tick_length = -0.3*base_size,
+                     x_axis_text_spacing = 0.8*base_size,
+                     y_axis_text_spacing = 0.8*base_size,
                      base_family = "",
                      base_theme = ggplot2::theme_bw,
                      label_colour = "gray50") {
@@ -53,9 +60,7 @@ xy_theme <- function(base_size = 12,
       axis.title = ggplot2::element_text(colour = label_colour, size = base_size),
       # Put ticks inside graph and adjust location of axis labels appropriately.
       axis.ticks.length = ggplot2::unit(tick_length,  "pt"),
-      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 0.8*base_size, unit = "pt")),
-      axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = 0.8*base_size, unit = "pt"), hjust = 1) # Right justify
+      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = x_axis_text_spacing, unit = "pt")),
+      axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = y_axis_text_spacing, unit = "pt"), hjust = 1) # Right justify
     )
-
-
 }
