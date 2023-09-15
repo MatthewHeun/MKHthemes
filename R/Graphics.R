@@ -44,9 +44,11 @@
 #' @examples
 #' library(ggplot2)
 #' DF <- data.frame(x = seq(1, 10), y = seq(11,20))
-#' ggplot(data = DF, mapping = aes(x = x, y = y)) +
-#'   geom_point() +
-#'   xy_theme()
+#' p <- DF |>
+#'   ggplot(mapping = aes(x = x, y = y)) +
+#'   geom_line()
+#' p
+#' p + MKHthemes::xy_theme()
 xy_theme <- function(font_size = 12,
                      font_family = "",
                      tick_length = -0.3*font_size,
