@@ -17,5 +17,8 @@ Imports:
     ggplot2
 Suggests:
     testthat,
-    spelling
+    spelling,
+    knitr,
+    rmarkdown
 Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr

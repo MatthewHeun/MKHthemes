@@ -1,0 +1,136 @@
+---
+title: "MKHthemes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MKHthemes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>", 
+  fig.retina = 2, 
+  fig.width = 6, 
+  fig.height = 4, 
+  fig.align = "center"
+)
+```
+
+```{r setup}
+library(ggplot2)
+library(MKHthemes)
+library(tibble)
+```
+
+## Introduction
+
+`ggplot2` is awesome! 
+However, some of its features are ... less than desirable.
+This package provides ways to improve on its presentation of graphs.
+By default, it provides a more pleasant version of graphs than `ggplot2`, and
+it includes a few options to tweak graphs easily.
+
+The package contains only one function, `MKHthemes::xy_theme()`.
+By default, `MKHthemes::xy_theme()` gives aesthetically pleasing graphs.
+Arguments to the function provide easy ways to adjust commonly needed settings
+that are esoteric and hidden deeply within `ggplot2`.
+The following sections describe the function `MKHthemes::xy_theme()`
+and its arguments.
+
+
+## Sample data
+
+Here is a data frame of data we can use for the examples that follow.
+
+```{r}
+df <- tibble::tribble(~x, ~y, ~EorX,     ~Country, 
+                       1,  2, "Energy",  "Georgia", 
+                       2,  3, "Energy",  "Georgia",
+                       4,  5, "Exergy",  "Georgia",
+                       6,  7, "Exergy",  "Georgia",
+                      11, 12, "Energy",  "Fiji", 
+                      12, 13, "Energy",  "Fiji",
+                      14, 15, "Exergy",  "Fiji",
+                      16, 17, "Exergy",  "Fiji")
+df
+```
+
+## A first example
+
+The default settings for `ggplot2` give the following graph.
+
+```{r}
+p <- df |> 
+  ggplot2::ggplot(mapping = ggplot2::aes(x = x, y = y)) + 
+  ggplot2::geom_line() + 
+  ggplot2::facet_grid(rows = ggplot2::vars(Country), 
+                      cols = ggplot2::vars(EorX))
+p
+```
+
+I find the figure above to be quite ugly:
+
+* Gray background? Really? 
+  Edward Tufte says that graphs should be made with the least amount of ink. 
+  Too much ink spilled on the background.
+* Dark gray background for the facet labels? 
+  Again, too much ink spilled for non-data elements.
+* Tick marks outside of the plot. 
+  All elements of a graph should point toward the data, not away from it.
+  Tick marks outside point away from the data.
+  Tick marks inside point toward the data.
+* Grid lines?  
+  They make the view feel like they're incarcerated.  
+  
+To improve the appearance of the graph, 
+use `MKHthemes::xy_theme()`.
+
+```{r}
+p + MKHthemes::xy_theme()
+```
+
+`MKHthemes::xy_theme()`
+
+* eliminates the background colour,
+* adds inward-pointing tick marks,
+* provides a gray border around the graphs,
+* sets gray text for the graphics, and
+* enables easy fine-tuning of many esoteric settings.
+
+Each of these changes to the default theme both
+foregrounds the data and
+backgrounds the non-data elements of the graph.
+
+
+## Adjustments
+
+`MKHthemes::xy_theme()` provides several arguments 
+that enable easy adjustments of graphical parameters, 
+as shown in the following examples.
+
+```{r}
+# Change font size. Default is 12 points.
+p + MKHthemes::xy_theme(font_size = 8)
+# Change font family. Default is "", a sans-serif font.
+p + MKHthemes::xy_theme(font_family = "Times New Roman")
+# Adjust tick length in points. Default is -0.3*font_size.
+# Negative values are strongly recommended, 
+# because they point the ticks inward.
+p + MKHthemes::xy_theme(tick_length = -7)
+# Adjust spacing between axis values and the border in points. Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(x_axis_labels_spacing = 0, y_axis_labels_spacing = 20)
+# Change facet label distance from the graph in points. Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(x_strip_labels_spacing = -3, y_strip_labels_spacing = 20)
+# Change border and label colour. Default is "gray50".
+p + MKHthemes::xy_theme(border_and_label_colour = "red")
+```
+  
+  
+## Conclusion
+  
+`MKHthemes` provides nice-looking `ggplot2` graphics, 
+with sensible defaults and easy adjustment
+to otherwise-esoteric settings.
+  

@@ -5,32 +5,47 @@
 \title{Set a pleasing theme for graphs.}
 \usage{
 xy_theme(
-  base_size = 12,
-  tick_length = -0.3 * base_size,
-  x_axis_labels_spacing = 0.8 * base_size,
-  y_axis_labels_spacing = 0.8 * base_size,
-  base_family = "",
-  base_theme = ggplot2::theme_bw,
-  label_colour = "gray50"
+  font_size = 12,
+  font_family = "",
+  tick_length = -0.3 * font_size,
+  x_axis_labels_spacing = 0.2 * font_size,
+  y_axis_labels_spacing = 0.2 * font_size,
+  x_strip_labels_spacing = 0.2 * font_size,
+  y_strip_labels_spacing = 0.2 * font_size,
+  border_and_label_colour = "gray50"
 )
 }
 \arguments{
-\item{base_size}{The base font size for text elements. Default is \code{12}.}
+\item{font_size}{The base font size in points for fonts and other graphical elements.
+Default is \code{12}.}
 
-\item{tick_length}{The tick length in points. Default is \code{-0.3*base_size}, which is -3.6 points.
+\item{font_family}{The font family used in the graph.
+Default is an empty string (\code{""}), a sans-serif font.}
+
+\item{tick_length}{The tick length in points. Default is \code{-0.3*font_size}, which is -3.6 points.
 Negative is inside the graph, where ticks belong!}
 
 \item{x_axis_labels_spacing}{The distance between x axis labels and the x axis itself in points.
-Default is \code{0.8 * base_size}.}
+Default is \code{0.2*font_size}.}
 
 \item{y_axis_labels_spacing}{The distance between y axis labels and the y axis itself in points.
-Default is \code{0.8 * base_size}.}
+Default is \code{0.2*font_size}.}
 
-\item{base_family}{The base font family. Default is an empty string (\code{""}).}
+\item{x_strip_labels_spacing}{The distance between x strip text
+(labels at the top of a faceted plot) and
+the top border of the individual graphs
+in points.
+Default is \code{0.2*font_size} to leave space
+for descenders.}
 
-\item{base_theme}{The base theme for ggplot2 graphics. Default is \code{ggplot2::theme_bw}.}
+\item{y_strip_labels_spacing}{The distance between y strip text
+(labels to the right of a faceted plot) and
+the right border of the individual graphs
+in points.
+Default is \code{0.2*font_size} to leave space
+for descenders.}
 
-\item{label_colour}{The colour for labels. Default is "gray50".}
+\item{border_and_label_colour}{The colour for borders and labels. Default is "gray50".}
 }
 \description{
 This function provides a graphical style for \code{ggplot2} that includes
