@@ -119,10 +119,14 @@ p + MKHthemes::xy_theme(font_size_scale = 0.4)
 # Negative values are strongly recommended, 
 # because they point the ticks inward.
 p + MKHthemes::xy_theme(tick_length = -7)
-# Adjust spacing between axis values and the border in points. Defaults are 0.2*font_size.
-p + MKHthemes::xy_theme(x_axis_labels_spacing = -5, y_axis_labels_spacing = 20)
-# Change facet label distance from the graph in points. Defaults are 0.2*font_size.
-p + MKHthemes::xy_theme(x_strip_labels_spacing = -3, y_strip_labels_spacing = 20)
+# Adjust spacing between axis values and the border in points. 
+# Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(x_axis_labels_spacing = -5,
+                        y_axis_labels_spacing = 20)
+# Change facet label distance from the graph in points. 
+# Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(x_strip_labels_spacing = -3,
+                        y_strip_labels_spacing = 20)
 # Change border and label colour. Default is "gray50".
 p + MKHthemes::xy_theme(border_and_label_colour = "red")
 ```
