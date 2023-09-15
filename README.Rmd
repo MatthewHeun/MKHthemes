@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# MKHthemes
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The `R` package `MKHthemes` provides 
+a nice-looking theme for `ggplot2` graphs.
+
+
+## Installation
+
+You can install `MKHthemes` from github with:
+
+```{r gh-installation, eval = FALSE}
+# install devtools if not already installed
+# install.packages("devtools")
+devtools::install_github("MatthewHeun/MKHthemes")
+# To build vignettes locally, use
+devtools::install_github("MatthewHeun/MKHthemes", build_vignettes = TRUE)
+```
+
+
+## More Information
+
+Find more information, including vignettes and function documentation, at 
+<https://MatthewHeun.github.io/MKHthemes/>.

@@ -8,5 +8,5 @@ bibentry(
   textVersion = paste("Matthew Kuperus Heun (2023).",
                       "MKHthemes.",
                       "R package version 0.1.1.",
-                      "https://doi.org/10.5281/zenodo.5226085")
+                      "https://github.com/MatthewHeun/MKHthemes")
 )
