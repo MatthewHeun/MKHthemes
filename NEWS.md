@@ -3,7 +3,17 @@ title: "Release notes for `MKHthemes`"
 output: html_document
 ---
 
-# MKHthemes 0.1.1 (2023-09-15)
+
+Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zenodo.8349995), 
+which always resolves to the latest release.
+
+
+# MKHthemes 0.1.2 (2023-09-15) 
+
+* Clarified policies for font sizes.
+
+
+# MKHthemes 0.1.1 (2023-09-15) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8349996.svg)](https://doi.org/10.5281/zenodo.8349996)
 
 * Updated `xy_theme()` with better defaults for
   spacing between strip labels and graphs.
