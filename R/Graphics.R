@@ -13,6 +13,19 @@
 #'   \item white background.
 #' }
 #'
+#' By default, the font size for axis titles is set by `font_size`.
+#' The font size for all other text elements is scaled relative to `font_size`,
+#' by default 80% smaller than the axis titles.
+#' Adjust `font_size_scale` if 80% is not to your liking.
+#'
+#' Spacing between graphical elements can be specified with more precision
+#' using this function.
+#' `spacing_scale` adjusts spacing relative to `font_size` for all
+#' graphical elements.
+#' But spacing between axis labels and strip labels and nearby
+#' graph borders can also be specified individually.
+#' See the vignette for examples.
+#'
 #' @param font_size The base font size in points for fonts and other graphical elements.
 #'                  `font_size` is directly the size of the x- and y-axis titles.
 #'                  Default is `12`.
@@ -41,8 +54,10 @@
 #'                               Default is `spacing_scale*font_size`, normally 2.4 points,
 #'                               to leave space for descenders.
 #' @param tick_length The tick length in points. Default is `-1.5*spacing_scale*font_size`, normally -3.6 points,
-#'                    slightly more than the spacing between text and borders.
-#'                    Negative is inside the graph, where ticks belong!
+#'                    so the ticks will be slightly longer than
+#'                    the spacing between text and borders.
+#'                    Negative tick length indicates the ticks
+#'                    should be placed inside the graph, where ticks belong!
 #' @param border_and_label_colour The colour for borders and labels. Default is "gray50".
 #'
 #' @importFrom ggplot2 %+replace%

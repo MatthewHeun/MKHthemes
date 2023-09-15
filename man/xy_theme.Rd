@@ -70,6 +70,20 @@ This function provides a graphical style for \code{ggplot2} that includes
 \item white background.
 }
 }
+\details{
+By default, the font size for axis titles is set by \code{font_size}.
+The font size for all other text elements is scaled relative to \code{font_size},
+by default 80\% smaller than the axis titles.
+Adjust \code{font_size_scale} if 80\% is not to your liking.
+
+Spacing between graphical elements can be specified with more precision
+using this function.
+\code{spacing_scale} adjusts spacing relative to \code{font_size} for all
+graphical elements.
+But spacing between axis labels and strip labels and nearby
+graph borders can also be specified individually.
+See the vignette for examples.
+}
 \examples{
 library(ggplot2)
 DF <- data.frame(x = seq(1, 10), y = seq(11,20))
