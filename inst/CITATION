@@ -1,0 +1,12 @@
+bibentry(
+  bibtype     = "Manual",
+  title       = "MKHthemes",
+  author      = personList(as.person("Matthew Kuperus Heun")),
+  year        = "2023",
+  note        = "R package version 0.1.1",
+  url         = "https://github.com/MatthewHeun/MKHthemes",
+  textVersion = paste("Matthew Kuperus Heun (2023).",
+                      "MKHthemes.",
+                      "R package version 0.1.1.",
+                      "https://github.com/MatthewHeun/MKHthemes")
+)

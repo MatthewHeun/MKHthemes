@@ -61,7 +61,9 @@ This function provides a graphical style for \code{ggplot2} that includes
 \examples{
 library(ggplot2)
 DF <- data.frame(x = seq(1, 10), y = seq(11,20))
-ggplot(data = DF, mapping = aes(x = x, y = y)) +
-  geom_point() +
-  xy_theme()
+p <- DF |>
+  ggplot(mapping = aes(x = x, y = y)) +
+  geom_line()
+p
+p + MKHthemes::xy_theme()
 }

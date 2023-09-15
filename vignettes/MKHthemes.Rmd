@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, echo=FALSE}
 library(ggplot2)
 library(MKHthemes)
 library(tibble)
@@ -27,15 +27,15 @@ library(tibble)
 ## Introduction
 
 `ggplot2` is awesome! 
-However, some of its features are ... less than desirable.
-This package provides ways to improve on its presentation of graphs.
+However, some of its defaults are ... undesirable and ugly.
+`MKHthemes` provides ways to improve on its presentation of graphs.
 By default, it provides a more pleasant version of graphs than `ggplot2`, and
 it includes a few options to tweak graphs easily.
 
 The package contains only one function, `MKHthemes::xy_theme()`.
 By default, `MKHthemes::xy_theme()` gives aesthetically pleasing graphs.
-Arguments to the function provide easy ways to adjust commonly needed settings
-that are esoteric and hidden deeply within `ggplot2`.
+Arguments provide easy ways to adjust commonly needed but esoteric settings
+that are hidden deep within `ggplot2`.
 The following sections describe the function `MKHthemes::xy_theme()`
 and its arguments.
 
@@ -70,19 +70,20 @@ p <- df |>
 p
 ```
 
-I find the figure above to be quite ugly:
+I find the figure to be quite ugly:
 
 * Gray background? Really? 
-  Edward Tufte says that graphs should be made with the least amount of ink. 
-  Too much ink spilled on the background.
+  Graphs should be made with the least amount of ink. 
+  (See [Edward Tufte](https://www.edwardtufte.com/).)
+  Too much ink is spilt on this background.
 * Dark gray background for the facet labels? 
-  Again, too much ink spilled for non-data elements.
-* Tick marks outside of the plot. 
+  Again, too much ink used for non-data elements.
+* Tick marks outside of the plot?
   All elements of a graph should point toward the data, not away from it.
   Tick marks outside point away from the data.
-  Tick marks inside point toward the data.
+  Tick marks inside point toward the data and are preferred.
 * Grid lines?  
-  They make the view feel like they're incarcerated.  
+  They put the viewer in jail.
   
 To improve the appearance of the graph, 
 use `MKHthemes::xy_theme()`.
@@ -91,17 +92,14 @@ use `MKHthemes::xy_theme()`.
 p + MKHthemes::xy_theme()
 ```
 
-`MKHthemes::xy_theme()`
+By default, `MKHthemes::xy_theme()`
 
-* eliminates the background colour,
-* adds inward-pointing tick marks,
-* provides a gray border around the graphs,
-* sets gray text for the graphics, and
-* enables easy fine-tuning of many esoteric settings.
-
-Each of these changes to the default theme both
-foregrounds the data and
-backgrounds the non-data elements of the graph.
+* eliminates the background colour to reduce the amount of ink in the plot,
+* adds inward-pointing tick marks to point toward the data,
+* provides a thin gray border around the graphs to frame the data,
+* sets gray text for the border elements to push them to the visual background, and
+* enables easy fine-tuning of many esoteric settings
+  in the unlikely event that you disagree with any of the above.
 
 
 ## Adjustments
@@ -130,7 +128,7 @@ p + MKHthemes::xy_theme(border_and_label_colour = "red")
   
 ## Conclusion
   
-`MKHthemes` provides nice-looking `ggplot2` graphics, 
+`MKHthemes` provides pleasing `ggplot2` graphics, 
 with sensible defaults and easy adjustment
-to otherwise-esoteric settings.
+to otherwise-esoteric `ggplot2` settings.
   
