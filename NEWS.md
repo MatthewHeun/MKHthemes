@@ -8,7 +8,7 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
-# MKHthemes 0.1.2 (2023-09-15) 
+# MKHthemes 0.1.2 (2023-09-15) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8350273.svg)](https://doi.org/10.5281/zenodo.8350273)
 
 * Clarified policies for font sizes.
 
