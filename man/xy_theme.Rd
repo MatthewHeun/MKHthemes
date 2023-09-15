@@ -7,43 +7,55 @@
 xy_theme(
   font_size = 12,
   font_family = "",
-  tick_length = -0.3 * font_size,
-  x_axis_labels_spacing = 0.2 * font_size,
-  y_axis_labels_spacing = 0.2 * font_size,
-  x_strip_labels_spacing = 0.2 * font_size,
-  y_strip_labels_spacing = 0.2 * font_size,
+  font_size_scale = 0.8,
+  spacing_scale = 0.2,
+  x_axis_labels_spacing = spacing_scale * font_size,
+  y_axis_labels_spacing = spacing_scale * font_size,
+  x_strip_labels_spacing = spacing_scale * font_size,
+  y_strip_labels_spacing = spacing_scale * font_size,
+  tick_length = -1.5 * spacing_scale * font_size,
   border_and_label_colour = "gray50"
 )
 }
 \arguments{
 \item{font_size}{The base font size in points for fonts and other graphical elements.
+\code{font_size} is directly the size of the x- and y-axis titles.
 Default is \code{12}.}
 
 \item{font_family}{The font family used in the graph.
 Default is an empty string (\code{""}), a sans-serif font.}
 
-\item{tick_length}{The tick length in points. Default is \code{-0.3*font_size}, which is -3.6 points.
-Negative is inside the graph, where ticks belong!}
+\item{font_size_scale}{A default scale factor for non-axis-title fonts.
+Default is \code{0.8}.
+Change this parameter if you want to change the size
+of all non-axis-title text.}
+
+\item{spacing_scale}{A default scale factor for spacing between text and axes.
+Default is \code{0.2}.}
 
 \item{x_axis_labels_spacing}{The distance between x axis labels and the x axis itself in points.
-Default is \code{0.2*font_size}.}
+Default is \code{spacing_scale*font_size}, normally 2.4 points.}
 
 \item{y_axis_labels_spacing}{The distance between y axis labels and the y axis itself in points.
-Default is \code{0.2*font_size}.}
+Default is \code{spacing_scale*font_size}, normally 2.4 points.}
 
 \item{x_strip_labels_spacing}{The distance between x strip text
 (labels at the top of a faceted plot) and
 the top border of the individual graphs
 in points.
-Default is \code{0.2*font_size} to leave space
-for descenders.}
+Default is \code{spacing_scale*font_size}, normally 2.4 points,
+to leave space for descenders.}
 
 \item{y_strip_labels_spacing}{The distance between y strip text
 (labels to the right of a faceted plot) and
 the right border of the individual graphs
 in points.
-Default is \code{0.2*font_size} to leave space
-for descenders.}
+Default is \code{spacing_scale*font_size}, normally 2.4 points,
+to leave space for descenders.}
+
+\item{tick_length}{The tick length in points. Default is \code{-1.5*spacing_scale*font_size}, normally -3.6 points,
+slightly more than the spacing between text and borders.
+Negative is inside the graph, where ticks belong!}
 
 \item{border_and_label_colour}{The colour for borders and labels. Default is "gray50".}
 }

@@ -63,7 +63,7 @@ The default settings for `ggplot2` give the following graph.
 
 ```{r}
 p <- df |> 
-  ggplot2::ggplot(mapping = ggplot2::aes(x = x, y = y)) + 
+  ggplot2::ggplot(mapping = ggplot2::aes(x = x, y = y, colour = Country)) + 
   ggplot2::geom_line() + 
   ggplot2::facet_grid(rows = ggplot2::vars(Country), 
                       cols = ggplot2::vars(EorX))
@@ -113,18 +113,34 @@ as shown in the following examples.
 p + MKHthemes::xy_theme(font_size = 8)
 # Change font family. Default is "", a sans-serif font.
 p + MKHthemes::xy_theme(font_family = "Times New Roman")
+# Change size of all non-axis-title fonts.
+p + MKHthemes::xy_theme(font_size_scale = 0.4)
 # Adjust tick length in points. Default is -0.3*font_size.
 # Negative values are strongly recommended, 
 # because they point the ticks inward.
 p + MKHthemes::xy_theme(tick_length = -7)
 # Adjust spacing between axis values and the border in points. Defaults are 0.2*font_size.
-p + MKHthemes::xy_theme(x_axis_labels_spacing = 0, y_axis_labels_spacing = 20)
+p + MKHthemes::xy_theme(x_axis_labels_spacing = -5, y_axis_labels_spacing = 20)
 # Change facet label distance from the graph in points. Defaults are 0.2*font_size.
 p + MKHthemes::xy_theme(x_strip_labels_spacing = -3, y_strip_labels_spacing = 20)
 # Change border and label colour. Default is "gray50".
 p + MKHthemes::xy_theme(border_and_label_colour = "red")
 ```
-  
+
+
+## `MKHthemes` and `microtype`
+
+Note that `xy_theme()` scales fonts to arbitrary precision.
+If you use `MKHthemes` with the [knitr](https://yihui.org/knitr/) package and $\LaTeX$, 
+you may need to disable font scaling by the `microtype` package
+to avoid errors. 
+We have found the following code helpful on Windows machines.
+
+```
+\usepackage{microtype}
+\microtypesetup{expansion=false}
+```
+
   
 ## Conclusion
   
