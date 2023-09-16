@@ -8,7 +8,7 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
-# MKHthemes 0.1.3 (2023-09-16)
+# MKHthemes 0.1.3 (2023-09-16) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8352370.svg)](https://doi.org/10.5281/zenodo.8352370)
 
 * Now building and publishing website
 * Reporting tests for the first time.
