@@ -29,7 +29,8 @@ library(tibble)
 [ggplot2](https://ggplot2.tidyverse.org) is awesome! 
 However, some of its defaults are ... undesirable and ugly.
 `MKHthemes` provides ways to improve on its presentation of graphs.
-By default, it provides a more pleasant version of graphs than `ggplot2`, and
+By default, it provides a more pleasant graphs 
+than [ggplot2](https://ggplot2.tidyverse.org), and
 it includes a few options to tweak graphs easily.
 
 The package contains only one function, `MKHthemes::xy_theme()`.
