@@ -29,12 +29,12 @@ library(tibble)
 [ggplot2](https://ggplot2.tidyverse.org) is awesome! 
 However, some of its defaults are ... undesirable and ugly.
 `MKHthemes` provides ways to improve on its presentation of graphs.
-By default, it provides a more pleasant graphs 
+By default, it provides a more pleasing graphs 
 than [ggplot2](https://ggplot2.tidyverse.org), and
 it includes a few options to tweak graphs easily.
 
 The package contains only one function, `MKHthemes::xy_theme()`.
-By default, `MKHthemes::xy_theme()` gives aesthetically pleasing graphs.
+By default, `MKHthemes::xy_theme()` looks great.
 Arguments provide easy ways to adjust commonly needed but esoteric settings
 that are hidden deep within `ggplot2`.
 The following sections describe the function `MKHthemes::xy_theme()`
@@ -43,7 +43,9 @@ and its arguments.
 
 ## Sample data
 
-Here is a data frame of data we can use for the examples that follow.
+Here is a data frame for the examples that follow.
+It contains descenders for facet labels, 
+to ensure the labels are positioned correctly.
 
 ```{r}
 df <- tibble::tribble(~x, ~y, ~EorX,     ~Country, 
