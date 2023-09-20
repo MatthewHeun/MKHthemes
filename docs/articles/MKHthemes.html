@@ -76,21 +76,21 @@
 <p><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> is awesome!
 However, some of its defaults are … undesirable and ugly.
 <code>MKHthemes</code> provides ways to improve on its presentation of
-graphs. By default, it provides a more pleasant graphs than <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>, and it includes a few
+graphs. By default, it provides a more pleasing graphs than <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>, and it includes a few
 options to tweak graphs easily.</p>
-<p>The package contains only one function,
-<code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code>. By default,
-<code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code> gives aesthetically pleasing graphs.
-Arguments provide easy ways to adjust commonly needed but esoteric
-settings that are hidden deep within <code>ggplot2</code>. The following
-sections describe the function <code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code> and
-its arguments.</p>
+<p>The package contains only one function, <code><a href="../reference/xy_theme.html">xy_theme()</a></code>. By
+default, <code><a href="../reference/xy_theme.html">xy_theme()</a></code> looks great. Arguments provide easy
+ways to adjust commonly needed but esoteric settings that are hidden
+deep within <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a>. This
+vignette describes the function <code><a href="../reference/xy_theme.html">xy_theme()</a></code> and its
+arguments.</p>
 </div>
 <div class="section level2">
 <h2 id="sample-data">Sample data<a class="anchor" aria-label="anchor" href="#sample-data"></a>
 </h2>
-<p>Here is a data frame of data we can use for the examples that
-follow.</p>
+<p>Here is a data frame for the examples that follow. It contains
+descenders for facet labels, to ensure the labels are positioned
+correctly.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span><span class="op">~</span><span class="va">x</span>, <span class="op">~</span><span class="va">y</span>, <span class="op">~</span><span class="va">EorX</span>,     <span class="op">~</span><span class="va">Country</span>, </span>
 <span>                       <span class="fl">1</span>,  <span class="fl">2</span>, <span class="st">"Energy"</span>,  <span class="st">"Georgia"</span>, </span>
@@ -117,7 +117,7 @@ follow.</p>
 <div class="section level2">
 <h2 id="a-first-example">A first example<a class="anchor" aria-label="anchor" href="#a-first-example"></a>
 </h2>
-<p>The default settings for <code>ggplot2</code> give the following
+<p>The default settings for <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> give the following
 graph.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span> </span>
@@ -127,26 +127,25 @@ graph.</p>
 <span>                      cols <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html" class="external-link">vars</a></span><span class="op">(</span><span class="va">EorX</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">p</span></span></code></pre></div>
 <p><img src="MKHthemes_files/figure-html/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>I find the figure to be quite ugly:</p>
+<p>I find the figure quite ugly:</p>
 <ul>
 <li>Gray background? Really? Graphs should be made with the least amount
 of ink. (See <a href="https://www.edwardtufte.com/" class="external-link">Edward Tufte</a>.)
 Too much ink spilt for the background.</li>
-<li>Dark gray background for the facet labels? Again, too much ink used
-for non-data elements.</li>
+<li>Dark gray background for the facet labels? Again, too much ink is
+allocated to non-data elements.</li>
 <li>Tick marks outside of the plot? All elements of a graph should point
 toward the data, not away from it. Tick marks outside point away from
 the data. Tick marks inside point toward the data and are
 preferred.</li>
-<li>Grid lines?<br>
-They put the viewer in jail.</li>
+<li>Grid lines? They put the viewer in jail.</li>
 </ul>
 <p>To improve the appearance of the graph, use
-<code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code>.</p>
+<code><a href="../reference/xy_theme.html">xy_theme()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu">MKHthemes</span><span class="fu">::</span><span class="fu"><a href="../reference/xy_theme.html">xy_theme</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="MKHthemes_files/figure-html/unnamed-chunk-4-1.png" width="576" style="display: block; margin: auto;"></p>
-<p>By default, <code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code></p>
+<p>By default, <code><a href="../reference/xy_theme.html">xy_theme()</a></code></p>
 <ul>
 <li>eliminates the background colour to reduce the amount of ink in the
 plot,</li>
@@ -162,9 +161,9 @@ event that you disagree with any of the above.</li>
 <div class="section level2">
 <h2 id="adjustments">Adjustments<a class="anchor" aria-label="anchor" href="#adjustments"></a>
 </h2>
-<p><code><a href="../reference/xy_theme.html">MKHthemes::xy_theme()</a></code> provides several arguments that
-enable easy adjustments of graphical parameters, as shown in the
-following examples.</p>
+<p><code><a href="../reference/xy_theme.html">xy_theme()</a></code> provides several arguments that enable easy
+adjustments of graphical parameters, as shown in the following
+examples.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Change font size. Default is 12 points.</span></span>
 <span><span class="va">p</span> <span class="op">+</span> <span class="fu">MKHthemes</span><span class="fu">::</span><span class="fu"><a href="../reference/xy_theme.html">xy_theme</a></span><span class="op">(</span>font_size <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span></code></pre></div>
@@ -192,8 +191,8 @@ following examples.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Change facet label distance from the graph in points. </span></span>
 <span><span class="co"># Defaults are 0.2*font_size.</span></span>
-<span><span class="va">p</span> <span class="op">+</span> <span class="fu">MKHthemes</span><span class="fu">::</span><span class="fu"><a href="../reference/xy_theme.html">xy_theme</a></span><span class="op">(</span>x_strip_labels_spacing <span class="op">=</span> <span class="op">-</span><span class="fl">3</span>,</span>
-<span>                        y_strip_labels_spacing <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">p</span> <span class="op">+</span> <span class="fu">MKHthemes</span><span class="fu">::</span><span class="fu"><a href="../reference/xy_theme.html">xy_theme</a></span><span class="op">(</span>col_strip_labels_spacing <span class="op">=</span> <span class="op">-</span><span class="fl">3</span>,</span>
+<span>                        row_strip_labels_spacing <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
 <p><img src="MKHthemes_files/figure-html/unnamed-chunk-5-6.png" width="576" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Change border and label colour. Default is "gray50".</span></span>
@@ -205,18 +204,17 @@ following examples.</p>
 <code>MKHthemes</code> and <code>microtype</code><a class="anchor" aria-label="anchor" href="#mkhthemes-and-microtype"></a>
 </h2>
 <p>Note that <code><a href="../reference/xy_theme.html">xy_theme()</a></code> scales fonts to arbitrary
-precision. If you use <code>MKHthemes</code> with the <a href="https://yihui.org/knitr/" class="external-link">knitr</a> package and <span class="math inline">\(\LaTeX\)</span>, you may need to disable font
-scaling by the <code>microtype</code> package to avoid errors. We have
-found the following code helpful on Windows machines.</p>
+precision. If you use <code>MKHthemes</code> with <a href="https://yihui.org/knitr/" class="external-link">knitr</a> within <a href="https://www.latex-project.org" class="external-link"><span class="math inline">\(\LaTeX\)</span></a>, you may need to disable font
+scaling by the <code>microtype</code> package to avoid errors on Windows
+machines. We have found the following code helpful.</p>
 <pre><code>\usepackage{microtype}
 \microtypesetup{expansion=false}</code></pre>
 </div>
 <div class="section level2">
 <h2 id="conclusion">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
 </h2>
-<p><code>MKHthemes</code> provides pleasing <code>ggplot2</code>
-graphics, with sensible defaults and easy adjustment to
-otherwise-esoteric <code>ggplot2</code> settings.</p>
+<p><code>MKHthemes</code> provides pleasing <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> graphics, with sensible
+defaults and easy adjustment to otherwise-esoteric <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> settings.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

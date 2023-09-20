@@ -33,11 +33,11 @@ By default, it provides a more pleasing graphs
 than [ggplot2](https://ggplot2.tidyverse.org), and
 it includes a few options to tweak graphs easily.
 
-The package contains only one function, `MKHthemes::xy_theme()`.
-By default, `MKHthemes::xy_theme()` looks great.
+The package contains only one function, `xy_theme()`.
+By default, `xy_theme()` looks great.
 Arguments provide easy ways to adjust commonly needed but esoteric settings
-that are hidden deep within `ggplot2`.
-The following sections describe the function `MKHthemes::xy_theme()`
+that are hidden deep within [ggplot2](https://ggplot2.tidyverse.org).
+This vignette describes the function `xy_theme()`
 and its arguments.
 
 
@@ -62,7 +62,8 @@ df
 
 ## A first example
 
-The default settings for `ggplot2` give the following graph.
+The default settings for [ggplot2](https://ggplot2.tidyverse.org)
+give the following graph.
 
 ```{r}
 p <- df |> 
@@ -73,7 +74,7 @@ p <- df |>
 p
 ```
 
-I find the figure to be quite ugly:
+I find the figure quite ugly:
 
 * Gray background? Really? 
   Graphs should be made with the least amount of ink. 
@@ -89,13 +90,13 @@ I find the figure to be quite ugly:
   They put the viewer in jail.
   
 To improve the appearance of the graph, 
-use `MKHthemes::xy_theme()`.
+use `xy_theme()`.
 
 ```{r}
 p + MKHthemes::xy_theme()
 ```
 
-By default, `MKHthemes::xy_theme()`
+By default, `xy_theme()`
 
 * eliminates the background colour to reduce the amount of ink in the plot,
 * adds inward-pointing tick marks to point toward the data,
@@ -107,7 +108,7 @@ By default, `MKHthemes::xy_theme()`
 
 ## Adjustments
 
-`MKHthemes::xy_theme()` provides several arguments 
+`xy_theme()` provides several arguments 
 that enable easy adjustments of graphical parameters, 
 as shown in the following examples.
 
@@ -128,8 +129,8 @@ p + MKHthemes::xy_theme(x_axis_labels_spacing = -5,
                         y_axis_labels_spacing = 20)
 # Change facet label distance from the graph in points. 
 # Defaults are 0.2*font_size.
-p + MKHthemes::xy_theme(col_strip_labels_spacing = -3,
-                        row_strip_labels_spacing = 20)
+p + MKHthemes::xy_theme(col_facet_labels_spacing = -3,
+                        row_facet_labels_spacing = 20)
 # Change border and label colour. Default is "gray50".
 p + MKHthemes::xy_theme(border_and_label_colour = "red")
 ```
@@ -138,10 +139,11 @@ p + MKHthemes::xy_theme(border_and_label_colour = "red")
 ## `MKHthemes` and `microtype`
 
 Note that `xy_theme()` scales fonts to arbitrary precision.
-If you use `MKHthemes` with the [knitr](https://yihui.org/knitr/) package and $\LaTeX$, 
+If you use `MKHthemes` with [knitr](https://yihui.org/knitr/) 
+within [$\LaTeX$](https://www.latex-project.org), 
 you may need to disable font scaling by the `microtype` package
-to avoid errors. 
-We have found the following code helpful on Windows machines.
+to avoid errors on Windows machines. 
+We have found the following code helpful.
 
 ```
 \usepackage{microtype}
@@ -151,7 +153,7 @@ We have found the following code helpful on Windows machines.
   
 ## Conclusion
   
-`MKHthemes` provides pleasing `ggplot2` graphics, 
+`MKHthemes` provides pleasing [ggplot2](https://ggplot2.tidyverse.org) graphics, 
 with sensible defaults and easy adjustment
-to otherwise-esoteric `ggplot2` settings.
+to otherwise-esoteric [ggplot2](https://ggplot2.tidyverse.org) settings.
   
