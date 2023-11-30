@@ -3,9 +3,11 @@ title: "Release notes for `MKHthemes`"
 output: html_document
 ---
 
-
 Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zenodo.8349995), 
 which always resolves to the latest release.
+
+
+# MKHthemes 0.1.4 (2023-11-29)
 
 * Add continuous integration and upload to CodeCov.
 * Breaking change: some argument names for `xy_theme()` have changed.
