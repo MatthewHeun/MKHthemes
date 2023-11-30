@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # MKHthemes
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The `R` package `MKHthemes` provides 

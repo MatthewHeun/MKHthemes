@@ -11,8 +11,8 @@ xy_theme(
   spacing_scale = 0.2,
   x_axis_labels_spacing = spacing_scale * font_size,
   y_axis_labels_spacing = spacing_scale * font_size,
-  x_strip_labels_spacing = spacing_scale * font_size,
-  y_strip_labels_spacing = spacing_scale * font_size,
+  col_facet_labels_spacing = spacing_scale * font_size,
+  row_facet_labels_spacing = spacing_scale * font_size,
   tick_length = -1.5 * spacing_scale * font_size,
   border_and_label_colour = "gray50"
 )
@@ -39,14 +39,14 @@ Default is \code{spacing_scale*font_size}, normally 2.4 points.}
 \item{y_axis_labels_spacing}{The distance between y axis labels and the y axis itself in points.
 Default is \code{spacing_scale*font_size}, normally 2.4 points.}
 
-\item{x_strip_labels_spacing}{The distance between x strip text
+\item{col_facet_labels_spacing}{The distance between x strip text
 (labels at the top of a faceted plot) and
 the top border of the individual graphs
 in points.
 Default is \code{spacing_scale*font_size}, normally 2.4 points,
 to leave space for descenders.}
 
-\item{y_strip_labels_spacing}{The distance between y strip text
+\item{row_facet_labels_spacing}{The distance between y strip text
 (labels to the right of a faceted plot) and
 the right border of the individual graphs
 in points.
@@ -62,7 +62,7 @@ should be placed inside the graph, where ticks belong!}
 \item{border_and_label_colour}{The colour for borders and labels. Default is "gray50".}
 }
 \description{
-This function provides a graphical style for \code{ggplot2} that includes
+Provides a pleasing graphical style for \code{ggplot2} that includes
 \itemize{
 \item gray axes,
 \item gray tic marks,
