@@ -3,7 +3,7 @@
 
 #' Set a pleasing theme for graphs.
 #'
-#' This function provides a graphical style for `ggplot2` that includes
+#' Provides a pleasing graphical style for `ggplot2` that includes
 #' \itemize{
 #'   \item gray axes,
 #'   \item gray tic marks,
@@ -41,18 +41,18 @@
 #'                              Default is `spacing_scale*font_size`, normally 2.4 points.
 #' @param y_axis_labels_spacing The distance between y axis labels and the y axis itself in points.
 #'                              Default is `spacing_scale*font_size`, normally 2.4 points.
-#' @param x_strip_labels_spacing The distance between x strip text
-#'                               (labels at the top of a faceted plot) and
-#'                               the top border of the individual graphs
-#'                               in points.
-#'                               Default is `spacing_scale*font_size`, normally 2.4 points,
-#'                               to leave space for descenders.
-#' @param y_strip_labels_spacing The distance between y strip text
-#'                               (labels to the right of a faceted plot) and
-#'                               the right border of the individual graphs
-#'                               in points.
-#'                               Default is `spacing_scale*font_size`, normally 2.4 points,
-#'                               to leave space for descenders.
+#' @param col_facet_labels_spacing The distance between x strip text
+#'                                 (labels at the top of a faceted plot) and
+#'                                 the top border of the individual graphs
+#'                                 in points.
+#'                                 Default is `spacing_scale*font_size`, normally 2.4 points,
+#'                                 to leave space for descenders.
+#' @param row_facet_labels_spacing The distance between y strip text
+#'                                 (labels to the right of a faceted plot) and
+#'                                 the right border of the individual graphs
+#'                                 in points.
+#'                                 Default is `spacing_scale*font_size`, normally 2.4 points,
+#'                                 to leave space for descenders.
 #' @param tick_length The tick length in points. Default is `-1.5*spacing_scale*font_size`, normally -3.6 points,
 #'                    so the ticks will be slightly longer than
 #'                    the spacing between text and borders.
@@ -78,8 +78,8 @@ xy_theme <- function(font_size = 12,
                      spacing_scale = 0.2,
                      x_axis_labels_spacing = spacing_scale*font_size,
                      y_axis_labels_spacing = spacing_scale*font_size,
-                     x_strip_labels_spacing = spacing_scale*font_size,
-                     y_strip_labels_spacing = spacing_scale*font_size,
+                     col_facet_labels_spacing = spacing_scale*font_size,
+                     row_facet_labels_spacing = spacing_scale*font_size,
                      tick_length = -1.5*spacing_scale*font_size,
                      border_and_label_colour = "gray50") {
   # See https://github.com/infotroph/ggplot-ticks if we want to mirror ticks on top and right.
@@ -118,9 +118,9 @@ xy_theme <- function(font_size = 12,
                                           margin = ggplot2::margin(r = y_axis_labels_spacing, unit = "pt"),
                                           size = font_size_scale*font_size,
                                           hjust = 1), # Right justify
-      strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = x_strip_labels_spacing),
+      strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = col_facet_labels_spacing),
                                            size = font_size_scale*font_size),
-      strip.text.y = ggplot2::element_text(margin = ggplot2::margin(l = y_strip_labels_spacing),
+      strip.text.y = ggplot2::element_text(margin = ggplot2::margin(l = row_facet_labels_spacing),
                                            size = font_size_scale*font_size,
                                            angle = 270)
     )
