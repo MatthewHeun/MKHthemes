@@ -7,6 +7,7 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
+* Add more badges.
 * Added code of conduct.
 * Added contributing guide.
 * Added a statement of need to `README.Rmd`.
