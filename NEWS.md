@@ -9,6 +9,7 @@ which always resolves to the latest release.
 
 # MKHthemes 0.1.5 (2023-12-21)
 
+* Switch to standard GitHub pages approach.
 * Add more badges.
 * Added code of conduct.
 * Added contributing guide.
