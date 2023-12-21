@@ -7,7 +7,7 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
-# MKHthemes 0.1.5 (2023-12-21)
+# MKHthemes 0.1.5 (2023-12-21) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10419970.svg)](https://doi.org/10.5281/zenodo.10419970)
 
 * Switch to standard GitHub pages approach.
 * Add more badges.
