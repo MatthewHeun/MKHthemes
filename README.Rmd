@@ -19,13 +19,20 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The `R` package `MKHthemes` provides 
+## Statement of need
+
+The default appearance of `ggplot2` graphics is unattractive. 
+Tick marks point outward (away from the data).
+Grid lines are provided (are we in jail?).
+Borders are black (taking focus away from the data).
+
+This package (`MKHthemes`) provides 
 a nice-looking theme for `ggplot2` graphs.
 
 
 ## Installation
 
-You can install `MKHthemes` from github with:
+You can install `MKHthemes` from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install devtools if not already installed
