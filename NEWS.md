@@ -7,7 +7,16 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
-# MKHthemes 0.1.4 (2023-11-29)
+# MKHthemes 0.1.5 (2023-12-21)
+
+* Switch to standard GitHub pages approach.
+* Add more badges.
+* Added code of conduct.
+* Added contributing guide.
+* Added a statement of need to `README.Rmd`.
+
+
+# MKHthemes 0.1.4 (2023-11-29) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10223694.svg)](https://doi.org/10.5281/zenodo.10223694)
 
 * Add continuous integration and upload to CodeCov.
 * Breaking change: some argument names for `xy_theme()` have changed.
