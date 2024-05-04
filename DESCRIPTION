@@ -1,8 +1,8 @@
 Package: MKHthemes
 Type: Package
 Title: Themes for ggplot2 Graphics
-Version: 0.1.4
-Date: 2023-11-29
+Version: 0.1.5
+Date: 2023-12-21
 Authors@R: c(person("Matthew", "Heun", role = c("aut", "cre"),
                      email = "matthew.heun@me.com"))
 Author: Matthew Heun [aut, cre]
@@ -23,3 +23,4 @@ Suggests:
     spelling
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
+URL: https://matthewheun.github.io/MKHthemes/

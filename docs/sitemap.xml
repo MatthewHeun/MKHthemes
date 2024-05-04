@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>/articles/MKHthemes.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/articles/MKHthemes.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/articles/index.html</loc>
   </url>
   <url>
-    <loc>/news/index.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/authors.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/index.html</loc>
   </url>
   <url>
-    <loc>/reference/xy_theme.html</loc>
+    <loc>https://matthewheun.github.io/MKHthemes/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://matthewheun.github.io/MKHthemes/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://matthewheun.github.io/MKHthemes/reference/xy_theme.html</loc>
   </url>
 </urlset>
