@@ -53,13 +53,16 @@ in points.
 Default is \code{spacing_scale*font_size}, normally 2.4 points,
 to leave space for descenders.}
 
-\item{tick_length}{The tick length in points. Default is \code{-1.5*spacing_scale*font_size}, normally -3.6 points,
+\item{tick_length}{The tick length in points.
+Default is \code{-1.5*spacing_scale*font_size},
+normally -3.6 points,
 so the ticks will be slightly longer than
 the spacing between text and borders.
 Negative tick length indicates the ticks
 should be placed inside the graph, where ticks belong!}
 
-\item{border_and_label_colour}{The colour for borders and labels. Default is "gray50".}
+\item{border_and_label_colour}{The colour for borders and labels.
+Default is "gray50".}
 }
 \description{
 Provides a pleasing graphical style for \code{ggplot2} that includes
