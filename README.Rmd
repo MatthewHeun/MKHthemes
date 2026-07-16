@@ -23,14 +23,18 @@ knitr::opts_chunk$set(
 
 ## Statement of need
 
-The default appearance of `ggplot2` graphics is unattractive. 
+The default appearance of 
+[ggplot2](https://ggplot2.tidyverse.org)
+graphics is unattractive. 
 Tick marks point outward (away from the data).
 Grid lines are provided (are we in jail?).
 Borders are black (taking focus away from the data).
 The background color is gray, not white.
 
 This package (`MKHthemes`) provides 
-a nice-looking theme for `ggplot2` graphs,
+a nice-looking theme for 
+[ggplot2](https://ggplot2.tidyverse.org) 
+graphs,
 solving the problems identified above.
 
 
@@ -49,7 +53,8 @@ devtools::install_github("MatthewHeun/MKHthemes", build_vignettes = TRUE)
 
 ## Examples
 
-Out of the box, [ggplot2] graphs look like this:
+Out of the box, [ggplot2](https://ggplot2.tidyverse.org) 
+graphs look like this:
 
 ```{r ggplot2-example, fig.retina=2, fig.width=4, fig.height=2} 
 library(ggplot2)

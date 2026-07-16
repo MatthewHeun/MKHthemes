@@ -13,13 +13,14 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 ## Statement of need
 
-The default appearance of `ggplot2` graphics is unattractive. Tick marks
-point outward (away from the data). Grid lines are provided (are we in
-jail?). Borders are black (taking focus away from the data). The
-background color is gray, not white.
+The default appearance of [ggplot2](https://ggplot2.tidyverse.org)
+graphics is unattractive. Tick marks point outward (away from the data).
+Grid lines are provided (are we in jail?). Borders are black (taking
+focus away from the data). The background color is gray, not white.
 
-This package (`MKHthemes`) provides a nice-looking theme for `ggplot2`
-graphs, solving the problems identified above.
+This package (`MKHthemes`) provides a nice-looking theme for
+[ggplot2](https://ggplot2.tidyverse.org) graphs, solving the problems
+identified above.
 
 ## Installation
 
@@ -35,7 +36,8 @@ devtools::install_github("MatthewHeun/MKHthemes", build_vignettes = TRUE)
 
 ## Examples
 
-Out of the box, \[ggplot2\] graphs look like this:
+Out of the box, [ggplot2](https://ggplot2.tidyverse.org) graphs look
+like this:
 
 ``` r
 library(ggplot2)
