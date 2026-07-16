@@ -3,7 +3,7 @@ pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   MKHthemes: MKHthemes.html
-last_built: 2026-07-16T20:35Z
+last_built: 2026-07-16T20:37Z
 urls:
   reference: https://matthewheun.github.io/MKHthemes/reference
   article: https://matthewheun.github.io/MKHthemes/articles
