@@ -1,0 +1,190 @@
+# MKHthemes
+
+## Introduction
+
+[ggplot2](https://ggplot2.tidyverse.org) is awesome! However, some of
+its defaults are … undesirable and ugly. `MKHthemes` provides ways to
+improve [ggplot2](https://ggplot2.tidyverse.org) graphs. By default,
+`MKHthemes` provides more pleasing graphs than
+[ggplot2](https://ggplot2.tidyverse.org), and it includes a few options
+to tweak graphs easily.
+
+The package contains only one function,
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md).
+By default,
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+looks great. Arguments provide easy ways to adjust commonly needed but
+esoteric settings that are hidden deep within
+[ggplot2](https://ggplot2.tidyverse.org). This vignette describes the
+function
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+and its arguments.
+
+## Sample data
+
+Here is a data frame for the examples that follow. It contains
+descenders for facet labels, to ensure the labels are positioned
+correctly.
+
+``` r
+
+df <- tibble::tribble(~x, ~y, ~EorX,     ~Country, 
+                       1,  2, "Energy",  "Georgia", 
+                       2,  3, "Energy",  "Georgia",
+                       4,  5, "Exergy",  "Georgia",
+                       6,  7, "Exergy",  "Georgia",
+                      11, 12, "Energy",  "Fiji", 
+                      12, 13, "Energy",  "Fiji",
+                      14, 15, "Exergy",  "Fiji",
+                      16, 17, "Exergy",  "Fiji")
+df
+#> # A tibble: 8 × 4
+#>       x     y EorX   Country
+#>   <dbl> <dbl> <chr>  <chr>  
+#> 1     1     2 Energy Georgia
+#> 2     2     3 Energy Georgia
+#> 3     4     5 Exergy Georgia
+#> 4     6     7 Exergy Georgia
+#> 5    11    12 Energy Fiji   
+#> 6    12    13 Energy Fiji   
+#> 7    14    15 Exergy Fiji   
+#> 8    16    17 Exergy Fiji
+```
+
+## A first example
+
+The default settings for [ggplot2](https://ggplot2.tidyverse.org) give
+the following graph.
+
+``` r
+
+p <- df |> 
+  ggplot2::ggplot(mapping = ggplot2::aes(x = x, y = y, colour = Country)) + 
+  ggplot2::geom_line() + 
+  ggplot2::facet_grid(rows = ggplot2::vars(Country), 
+                      cols = ggplot2::vars(EorX))
+p
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-3-1.png)
+
+I find the figure quite ugly:
+
+- Gray background? Really? Graphs should be made with the least amount
+  of ink. (See [Edward Tufte](https://www.edwardtufte.com/).) Too much
+  ink spilt for the background.
+- Dark gray background for the facet labels? Again, too much ink is
+  allocated to non-data elements.
+- Tick marks outside of the plot? All elements of a graph should point
+  toward the data, not away from it. Tick marks outside point away from
+  the data. Tick marks inside point toward the data and are preferred.
+- Grid lines? They put the viewer in jail.
+
+To improve the appearance of the graph, use
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md).
+
+``` r
+
+p + MKHthemes::xy_theme()
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-4-1.png)
+
+By default,
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+
+- eliminates the background colour to reduce the amount of ink in the
+  plot,
+- adds inward-pointing tick marks to point toward the data,
+- provides a thin gray border around the graphs to frame the data,
+- sets gray text for the border elements to push them to the visual
+  background, and
+- enables easy fine-tuning of many esoteric settings in the unlikely
+  event that you disagree with any of the above.
+
+## Adjustments
+
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+provides several arguments that enable easy adjustments of graphical
+parameters, as shown in the following examples.
+
+``` r
+
+# Change font size. Default is 12 points.
+p + MKHthemes::xy_theme(font_size = 8)
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-1.png)
+
+``` r
+
+# Change font family. Default is "", a sans-serif font.
+p + MKHthemes::xy_theme(font_family = "Times New Roman")
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-2.png)
+
+``` r
+
+# Change size of all non-axis-title fonts.
+p + MKHthemes::xy_theme(font_size_scale = 0.4)
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-3.png)
+
+``` r
+
+# Adjust tick length in points. Default is -0.3*font_size.
+# Negative values are strongly recommended, 
+# because they point the ticks inward.
+p + MKHthemes::xy_theme(tick_length = -7)
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-4.png)
+
+``` r
+
+# Adjust spacing between axis values and the border in points. 
+# Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(x_axis_labels_spacing = -5,
+                        y_axis_labels_spacing = 20)
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-5.png)
+
+``` r
+
+# Change facet label distance from the graph in points. 
+# Defaults are 0.2*font_size.
+p + MKHthemes::xy_theme(col_facet_labels_spacing = -3,
+                        row_facet_labels_spacing = 20)
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-6.png)
+
+``` r
+
+# Change border and label colour. Default is "gray50".
+p + MKHthemes::xy_theme(border_and_label_colour = "red")
+```
+
+![](MKHthemes_files/figure-html/unnamed-chunk-5-7.png)
+
+## `MKHthemes` and `microtype`
+
+Note that
+[`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+scales fonts to arbitrary precision. If you use `MKHthemes` with
+[knitr](https://yihui.org/knitr/) within
+[\$\LaTeX\$](https://www.latex-project.org), you may need to disable
+font scaling by the `microtype` package to avoid errors on Windows
+machines. We have found the following code helpful.
+
+    \usepackage{microtype}
+    \microtypesetup{expansion=false}
+
+## Conclusion
+
+`MKHthemes` provides pleasing [ggplot2](https://ggplot2.tidyverse.org)
+graphics, with sensible defaults and easy adjustment to
+otherwise-esoteric [ggplot2](https://ggplot2.tidyverse.org) settings.

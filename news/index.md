@@ -1,0 +1,56 @@
+# Changelog
+
+## MKHthemes 0.1.6 (2026-07-16)
+
+- Better example in the Readme page for GitHub.
+- Added colour constants for graphs.
+- No new tests.
+  - Still at 1 test, which passes.
+  - Test coverage is at 100%.
+
+## MKHthemes 0.1.5 (2023-12-21) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10419970.svg)](https://doi.org/10.5281/zenodo.10419970)
+
+- Switch to standard GitHub pages approach.
+- Add more badges.
+- Added code of conduct.
+- Added contributing guide.
+- Added a statement of need to `README.Rmd`.
+- No new tests.
+  - Still at 1 test, which passes.
+  - Test coverage is at 100%.
+
+## MKHthemes 0.1.4 (2023-11-29) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10223694.svg)](https://doi.org/10.5281/zenodo.10223694)
+
+- Add continuous integration and upload to CodeCov.
+- Breaking change: some argument names for
+  [`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+  have changed.
+  - x_strip_labels_spacing –\> col_facet_labels_spacing
+  - y_strip_labels_spacing –\> row_facet_labels_spacing
+- No new tests.
+  - Still at 1 test, which passes.
+  - Test coverage is at 100%.
+
+## MKHthemes 0.1.3 (2023-09-16) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8352370.svg)](https://doi.org/10.5281/zenodo.8352370)
+
+- Now building and publishing website
+- Reporting tests for the first time.
+  - Starting at 1 test, which passes.
+  - Test coverage is at 100%.
+
+## MKHthemes 0.1.2 (2023-09-15) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8350273.svg)](https://doi.org/10.5281/zenodo.8350273)
+
+- Clarified policies for font sizes.
+
+## MKHthemes 0.1.1 (2023-09-15) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8349996.svg)](https://doi.org/10.5281/zenodo.8349996)
+
+- Updated
+  [`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md)
+  with better defaults for spacing between strip labels and graphs.
+- Removed the base theme argument to
+  [`xy_theme()`](https://matthewheun.github.io/MKHthemes/reference/xy_theme.md).
+  It was never used, anyway.
+
+## MKHthemes 0.1.0 (2018-07-07)
+
+- Initial release
