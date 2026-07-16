@@ -7,8 +7,13 @@ Cite all releases with doi [10.5281/zenodo.8349995](https://doi.org/10.5281/zeno
 which always resolves to the latest release.
 
 
+# MKHthemes 0.1.6 (2026-07-16) 
+
 * Better example in the Readme page for GitHub.
 * Added colour constants for graphs.
+* No new tests.
+    - Still at 1 test, which passes.
+    - Test coverage is at 100%.
 
 
 # MKHthemes 0.1.5 (2023-12-21) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10419970.svg)](https://doi.org/10.5281/zenodo.10419970)

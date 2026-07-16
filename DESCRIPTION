@@ -1,8 +1,8 @@
 Package: MKHthemes
 Type: Package
 Title: Themes for ggplot2 Graphics
-Version: 0.1.5
-Date: 2023-12-21
+Version: 0.1.6
+Date: 2026-07-16
 Authors@R: c(person("Matthew", "Heun", role = c("aut", "cre"),
                      email = "matthew.heun@me.com"))
 Author: Matthew Heun [aut, cre]
@@ -13,7 +13,7 @@ Language: en-US
 Encoding: UTF-8
 RoxygenNote: 7.3.3
 Depends: 
-    R (>= 3.5)
+    R (>= 4.1.0)
 Imports:
     ggplot2
 Suggests:
