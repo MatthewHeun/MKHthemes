@@ -6,8 +6,6 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MatthewHeun/MKHthemes/actions/workflows/R-CMD-check.yaml)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/CLPFUDatabase)](https://CRAN.R-project.org/package=CLPFUDatabase)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8349995.svg)](https://doi.org/10.5281/zenodo.8349995)
@@ -34,6 +32,33 @@ devtools::install_github("MatthewHeun/MKHthemes")
 # To build vignettes locally, use
 devtools::install_github("MatthewHeun/MKHthemes", build_vignettes = TRUE)
 ```
+
+## Examples
+
+Out of the box, \[ggplot2\] graphs look like this:
+
+``` r
+library(ggplot2)
+
+ggplot2::ggplot(mpg, ggplot2::aes(x = displ, 
+                                  y = hwy, 
+                                  colour = class)) +
+  geom_point()
+```
+
+<img src="man/figures/README-ggplot2-example-1.png" alt="" width="100%" />
+
+To improve the graph, do the following:
+
+``` r
+ggplot2::ggplot(mpg, ggplot2::aes(x = displ, 
+                                  y = hwy, 
+                                  colour = class)) +
+  geom_point() + 
+  MKHthemes::xy_theme()
+```
+
+<img src="man/figures/README-MKHthemes-improvement-1.png" alt="" width="100%" />
 
 ## More Information
 
