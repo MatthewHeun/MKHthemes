@@ -1,10 +1,9 @@
-pandoc: 3.1.1
-pkgdown: 2.0.7
+pandoc: 3.8.3
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   MKHthemes: MKHthemes.html
-last_built: 2023-12-21T18:31Z
+last_built: 2026-07-16T20:31Z
 urls:
   reference: https://matthewheun.github.io/MKHthemes/reference
   article: https://matthewheun.github.io/MKHthemes/articles
-
