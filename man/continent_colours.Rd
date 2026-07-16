@@ -23,6 +23,15 @@ continent_colours
 }
 \description{
 A string list containing names of colours for continents.
+These colours were used for Figure B1 of
+P. E. Brockway, M. K. Heun, Z. Marshall, E. Aramendia,
+P. Steenwyk, T. Relph, M. Widjanarko,
+J. J. Kim, A. Sainju, and J. Irtube.
+A country-level primary-final-useful (CL-PFU) energy and exergy
+database: Overview of its construction and 1971–2020
+world-level efficiency results.
+Environmental Research: Energy, 1(025005):1–29, June 2024.
+\url{https://doi.org/10.1088/2753-3751/ad4e39}
 }
 \examples{
 continent_colours
