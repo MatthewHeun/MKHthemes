@@ -11,7 +11,6 @@ Description: Provides nice theming for ggplot2 graphs.
 License: MIT + file LICENSE
 Language: en-US
 Encoding: UTF-8
-RoxygenNote: 7.3.3
 Depends: 
     R (>= 4.1.0)
 Imports:
@@ -26,3 +25,4 @@ Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 URL: https://matthewheun.github.io/MKHthemes/
 LazyData: true
+Config/roxygen2/version: 8.1.0
